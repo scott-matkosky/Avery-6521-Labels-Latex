@@ -1,2 +1,3 @@
 # Avery-6521-Labels-Latex
-Avery 6521 Latex Address formatting
+
+Simply choose your font, add name and address - build with XeLaTeX and print the resulting pdf file onto your Avery 6521 address label sheet... 

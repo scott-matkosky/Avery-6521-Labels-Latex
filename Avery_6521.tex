@@ -1,0 +1,35 @@
+\documentclass{article}
+
+% Adjust page margins for Avery 6521
+\usepackage[letterpaper,margin=0.125in,top=0.5in]{geometry}
+
+% TikZ for layout
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+% Use custom fonts (requires XeLaTeX or LuaLaTeX)
+\usepackage{fontspec}
+\setmainfont{Zapfino} % Replace with the desired font name
+
+\begin{document}
+
+% Remove page numbers
+\pagestyle{empty}
+
+\centering
+\begin{tikzpicture}[thick,font=\scriptsize] % Adjust font size if needed
+
+% Loop for 3 columns and 10 rows of labels
+\foreach \i in {0,2.625,5.25} { % Horizontal positions (columns)
+\foreach \j in {0,-1.01,-2.02,-3.03,-4.04,-5.05,-6.06,-7.07,-8.08,-9.09} { % Fine-tuned vertical positions
+% Add label text, centered both horizontally and vertically
+\node[anchor=center,align=center] at ($( \i in,\j in ) + (1.3125in,-0.5in)$) {%
+\textbf{your name here}\\
+Your Address Line 1\\
+Your Address Line 2};
+}
+}
+
+\end{tikzpicture}
+
+\end{document}
